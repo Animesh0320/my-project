@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+  }
+  
+  .outer-container {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .balance {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 30px;
+  }
+  
+  .inner-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  .deposit,
+  .withdraw {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    user-select: none;
+  }
+  
+  .deposit {
+    background-color: #4caf50;
+  }
+  
+  .deposit:hover {
+    background-color: #43a047;
+  }
+  
+  .withdraw {
+    background-color: #f44336;
+  }
+  
+  .withdraw:hover {
+    background-color: #e53935;
+  }
+  
+ 
+  @media (max-width: 480px) {
+    .inner-container {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .deposit,
+    .withdraw {
+      width: 48%;
+    }
+  }
