@@ -1,0 +1,23 @@
+This project is a simple responsive banking user interface created using only HTML and CSS. 
+It displays a balance amount along with two options labeled "Deposit" and "Withdraw." 
+The design is clean, centered, and adapts to different screen sizes for better usability on both desktop and mobile devices.
+
+HTML - 
+In the HTML part, the structure begins with a main container called outer-container, which wraps all
+the visible content. Inside it, there's a balance div that displays the current balance amount, for example, 
+"Balance: ₹0.00". Below that, an inner-container div holds two more divs named deposit and withdraw. These two divs act like buttons and
+represent the deposit and withdraw actions. The HTML 
+does not contain any interactive functionality; it is only responsible for laying out the structure of the user
+interface.
+
+CSS - 
+The CSS file handles all the visual styling and responsiveness of the layout. It begins by setting up general
+rules such as centering the content in the middle of the screen, applying a background color, and using a 
+clean font. The outer-container is styled to look like a card with padding, rounded corners, a white background, 
+and a subtle box shadow. The balance is styled to appear in large, bold green text to stand out. The deposit and 
+withdraw divs are styled to look like clickable buttons with proper padding, background colors (green for deposit and red
+for withdraw), white text, and rounded edges. There are also hover effects added to both buttons to give visual feedback when hovered.
+
+To make the layout responsive, a media query is used. By default, on larger screens, the deposit and withdraw sections 
+are stacked vertically in a column layout. When the screen width goes below 480 pixels, the layout automatically changes
+to a row layout so that the buttons appear side by side, which is more suitable for smaller screens like mobile devices.
