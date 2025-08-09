@@ -1,0 +1,15 @@
+Learnings from the Experiment:
+1. Understood how to create a responsive and accessible HTML form.
+2. Learned how to use basic HTML5 form elements: <label>, <input>, <button>, etc.
+3. Gained practical experience with form validations using required, minlength, maxlength, min, and max attributes.
+
+Test Cases / Scenarios Covered:
+1. Submitting form with empty fields – blocked due to 'required'.
+2. Entering a name with less than 2 characters – blocked due to 'minlength'.
+3. Entering a name longer than 50 characters – blocked due to 'maxlength'.
+
+CSS Explanation:
+1. font-family: Sets the font style of the whole page (Arial).
+2. background: Light background applied to the body and white background to the form for clean contrast.
+3. padding: Creates inner space inside elements like inputs and the form box for neat spacing.
+4. border-radius: Rounds the corners of input fields and buttons for a soft, modern look.
