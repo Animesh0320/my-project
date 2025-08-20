@@ -1,0 +1,41 @@
+This project is a lightweight web application that allows users to count characters in real-time as they type into a text box. It leverages HTML, CSS, and JavaScript to provide an interactive and user-friendly experience.
+
+HTML (Structure)
+The webpage consists of a simple, well-organized layout:
+
+Container <div>
+Displays the page heading: “Live Character Counter”.
+Provides a <textarea> (id=txtData) where users can enter text. It also uses a placeholder to guide new users.
+Includes a <div> with the class counter that dynamically displays the current character count. A <span> element (id=counter) is updated in real time.
+
+Script Section
+Contains JavaScript for handling input events.
+Listens to user keystrokes using the input event on the textarea.
+On each keystroke, it retrieves the text length (textarea.value.length) and updates the counter display.
+
+CSS (Styling)
+The design is kept minimal yet clean to enhance usability:
+
+Body
+Uses the Arial, sans-serif font family.
+Provides a margin of 10px for breathing space.
+
+Textarea
+Occupies the full width of the container (width: 100%).
+Uses a larger, comfortable font size (18px).
+Includes padding (10px) and box-sizing: border-box so borders and padding don’t break layout consistency.
+
+Counter (.counter)
+Styled for emphasis with font-weight: bold.
+Adds a subtle margin-top: 5px for spacing.
+
+Box (.box)
+Enclosed with a 2px solid black border.
+Includes padding: 10px for readability.
+Adds margin-bottom: 20px between sections.
+Restricts layout width with max-width: 500px, keeping design neat and focused.
+
+Key Takeaways
+Learned practical usage of JavaScript DOM manipulation by dynamically updating content.
+Gained experience in handling real-time events with addEventListener.
+Practiced integrating HTML structure, CSS styling, and JavaScript interactivity into a cohesive web application.
