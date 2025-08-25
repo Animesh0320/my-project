@@ -1,0 +1,52 @@
+Project Summary: Basic Canvas Drawing Application
+
+This project focuses on building a simple drawing program using the HTML <canvas> element, styled with CSS, and controlled through JavaScript.
+It allows users to sketch freely on the canvas by clicking and dragging their mouse.
+
+The functionality is achieved by handling mouse events (mousedown, mousemove, mouseup, and mouseout) so that the drawing appears smooth and continuous.
+
+Webpage Layout (HTML)
+The page contains two primary sections:
+
+Title Section
+A <h3> heading with the text “SVG Drawing Tool”.
+
+Drawing Section
+A <canvas> element with the ID drawingCanvas.
+The canvas is 600 × 400 pixels and serves as the drawing surface.
+The logic of the app is included within a <script> block at the bottom of the HTML page.
+
+Styling the Page (CSS)
+Body
+The page is centered horizontally and vertically using Flexbox (display: flex; justify-content: center; align-items: center;).
+The height of the body spans the entire screen (100vh).
+
+Canvas
+A 2px solid black border makes the drawing area clearly visible.
+The background is set to a light grey shade (#f9f9f9).
+Program Logic (JavaScript)
+
+Initialization
+The canvas is selected with getElementById.
+A 2D drawing context is obtained using getContext("2d").
+Variables (isDrawing, lastX, lastY) track whether the mouse is pressed and the last cursor position.
+
+Mouse Events
+mousedown: Activates drawing mode and records the starting point.
+mousemove: Draws lines continuously while the mouse is pressed.
+mouseup: Stops drawing when the button is released.
+mouseout: Ends drawing if the cursor leaves the canvas area.
+
+Drawing Process
+beginPath() starts a fresh path.
+moveTo(lastX, lastY) moves to the previous cursor position.
+lineTo(e.offsetX, e.offsetY) creates a line to the current position.
+stroke() renders the line on the canvas.
+The lines are styled blue with a 2px width.
+
+Key Learnings
+Using the <canvas> element to create interactive graphics.
+Handling mouse actions (mousedown, mousemove, mouseup, mouseout) for user interaction.
+Applying drawing methods (beginPath(), moveTo(), lineTo(), stroke()).
+Updating a web page dynamically without reloading.
+Integrating HTML, CSS, and JavaScript to build a functional drawing app.

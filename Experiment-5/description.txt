@@ -1,0 +1,56 @@
+Project Overview: Product Filter System
+
+This project builds a simple Product Filter using HTML and JavaScript.
+It lets users add products with details like ID, Name, Price, and Category.
+Users can then filter the products by selecting a category from a dropdown.
+The categories update automatically whenever new products are added.
+
+HTML (Webpage Layout)
+The webpage is divided into three main parts inside a <div class="container">:
+
+Product Details Section
+Title: “Enter Product Details”
+Four input boxes for:
+Product ID
+Product Name
+Product Price
+Product Category
+A button labeled “Add Product”, which runs the addProduct() function when clicked.
+
+Category Filter Section
+Title: “Filter by Category”
+
+A dropdown menu (<select>) with id categoryDropdown
+Includes a default option “All” to show every product.
+
+Product List Section
+Title: “Product List”
+A <div> with id productList where all products will be displayed.
+
+JavaScript (How It Works)
+Adding Products – addProduct()
+Reads the values entered by the user.
+Makes sure no field is empty.
+Creates a product object and stores it in the products[] array.
+Updates both the product list and the category dropdown.
+Clears the input boxes after adding.
+Updating the Category Dropdown – updateCategoryDropdown()
+Collects unique categories from all products.
+Refreshes the dropdown menu.
+Keeps the “All” option at the top.
+
+Filtering Products – filterProducts()
+Shows only products of the selected category.
+If “All” is chosen, products are grouped by category.
+Handles cases where no products are available or no match is found.
+
+Clearing Inputs – clearInputs()
+Resets all input fields after a product is added.
+On Page Load
+filterProducts() runs automatically and displays “No products added yet.” if the list is empty.
+
+What I Learnt
+How to update webpage content using JavaScript.
+How to store product details as objects in an array.
+How to filter and display products by category.
+How to build a system that updates automatically without reloading the page.
