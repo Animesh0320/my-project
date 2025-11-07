@@ -1,0 +1,32 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  # Your Node.js API
+  api:
+    build: . # Build from the Dockerfile in this directory
+    container_name: ecom-api
+    ports:
+      - "4000:4000" # Map host port 4000 to container port 4000
+    volumes:
+      - .:/app # Mount your local code into the container
+      - /app/node_modules # Don't mount local node_modules
+    environment:
+      # Use the 'mongo' service name as the host
+      MONGODB_URI: mongodb://mongo:27017/ecom-db
+      # You MUST add all your other .env variables here
+      JWT_SECRET: yoursecretkey 
+    depends_on:
+      - mongo # Wait for the mongo service to be healthy
+    
+  # The MongoDB Database
+  mongo:
+    image: mongo:latest
+    container_name: ecom-mongo
+    ports:
+      - "27017:27017" # Expose DB port to your host machine
+    volumes:
+      - mongo-data:/data/db # Persist database data
+
+volumes:
+  mongo-data: # Define the persistent volume
